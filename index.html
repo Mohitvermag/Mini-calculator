@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:1000px;
+            width:100%;
+            background-color:antiquewhite;
+            background-size: cover;
+            }  
+        button{
+            height: 50px;
+            background-color: cadetblue;
+            border-radius: 10px;
+        } 
+        input{
+            width: 120%;
+            border-top: hidden;
+            border-left: hidden ;
+            border-right: hidden;
+            background-color: antiquewhite;
+        }
+        input:hover{
+            height:25px;
+            width:120%;
+            border-radius: 10px;
+            background-color: gray;
+            color:white;
+        }
+        TABLE{
+            margin-top: -80px;
+           font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>Mini CALCULATOR</h1>
+        <table>
+            <tr>
+                <td>
+        <label for="">Enter First Number </label></td>
+        <td>:</td>
+        <td><input type="number" name="" id="first" required></td>
+        </tr>
+        <br><br>
+        <tr>
+            <td>
+        <label for="">Enter Second Number </label></td>
+        <td>:</td>
+        <td><input type="number" id="second" required></td>
+    </tr><br><br>
+    <tr>
+        <tr>
+        <td>Operation</td>
+        <td>:</td>
+        <td><input type="text" id="Operation" required></td>
+        </tr>
+        <td>
+        <label for="">Result</label></td>
+        <td>:</td>
+        <td>
+        <input type="number" id="result" name="result" value=""></td>
+        </tr><br><br>
+        </table><br>
+        <button onclick="add()">Click here to get Result</button>
+        </center>
+       <script>
+            function add(){
+                var a = document.getElementById('first').value;
+                var b = document.getElementById('second').value;
+                var opr = document.getElementById('Operation').value;
+                switch(opr){
+                    case "+":
+                        var result = Number(a)+Number(b);
+                        break;
+                    case "-":
+                            var result = Number(a)-Number(b);
+                        break;
+                    case "*":
+                        var result = Number(a)*Number(b);
+                        break;
+                    case "/":
+                        var result = Number(a)/Number(b);
+                        break;
+                    default:
+                        document.write('Invalid')
+                }
+                document.getElementById('result').value = result;
+                //var c = Number(a)+Number(b);
+                //document.getElementById('result').value = c;
+            }
+        </script>
+        <!---
+        <h1>Enter Your age to get your Remaining Days of Life</h1>
+        <input type="number" name="" id="age" placeholder="Enter age"><br><br>
+        <button onclick="get()">Click here to get Remaining Days of Life</button>
+        <script>
+            function get(){
+                var a = document.getElementById('age').value;
+                var months = (90*12)-(Number(a)*12)
+                var weeks = (90*52)-(Number(a)*52)
+                var days = (90*365)-(Number(a)*365)
+                var hours = (90*365*24)-(Number(a)*365*24)
+                document.write("Remaing Months are " +months)
+                document.write("<br/>")
+                document.write("Remaing Weeks are " +weeks)
+                document.write("<br/>")
+                document.write("Remaing Days are " +days)
+                document.write("<br/>")
+                document.write("Remaing Hours are " +hours)
+            }
+        </script>-->
+    </div>
+</body>
+</html>
